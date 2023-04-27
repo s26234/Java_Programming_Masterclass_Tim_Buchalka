@@ -1,0 +1,449 @@
+package org.example;
+
+public class Main {
+    public static void main(String[] args) {
+        int myFirstNumber = (10 + 5) + (2 * 10);
+        int mySecondNumber = 12;
+        int myThirdNumber = 6;
+        System.out.println("Hello world!");
+        System.out.println(myFirstNumber);
+        System.out.println(mySecondNumber);
+        System.out.println(myThirdNumber);
+
+        int myTotal = myFirstNumber + mySecondNumber + myThirdNumber;
+        System.out.println(myTotal);
+
+        int myLastOne = 1000 - myTotal;
+        System.out.println(myLastOne);
+
+        int myMinIntValue = Integer.MIN_VALUE;
+        System.out.println(myMinIntValue);
+
+        int myMaxIntValue = Integer.MAX_VALUE;
+        System.out.println(myMaxIntValue);
+
+        int willThisCompile = (Integer.MAX_VALUE - 1);
+        System.out.println(willThisCompile);
+
+        long myLongValue = 100L;
+        System.out.println("A long has a width of " + Long.SIZE);
+
+        short firstShort = 1;
+        int firstInt = 2;
+        System.out.println(firstShort + firstInt);
+
+        byte firstByte = 1, secondByte = 2;
+        System.out.println(firstByte + secondByte);
+
+        int myTotal2 = (myMinIntValue / 2);
+        System.out.println(myTotal2);
+
+        short myNewShortValue = (short) (firstShort * 2);
+        System.out.println(myNewShortValue);
+
+        byte myByte = 3;
+        short myShort = 8;
+        int myInt = 21;
+        long myLong = 50000L;
+        long myLong2 = myLong + 10 * ((byte) myByte + (short) myShort + myInt);
+        System.out.println(myByte);
+        System.out.println(myShort);
+        System.out.println(myInt);
+        System.out.println(myLong);
+        System.out.println(myLong2);
+
+        float myOtherFloatValue = 5.25F;
+        System.out.println(myOtherFloatValue);
+
+        double myDoublePound = 5d;
+        double myDoubleConverter = 0.45359237d;
+        double myDoubleKilo = myDoublePound * myDoubleConverter;
+        System.out.println(myDoubleKilo);
+
+        char myChar = 'D';
+        System.out.println(myChar);
+
+        char myUnicode = '\u0044';
+        System.out.println(myUnicode);
+
+        char myDecimalCode = 68;
+        System.out.println(myDecimalCode);
+
+        boolean myTrueBooleanValue = true;
+        boolean myFalseBooleanValue = false;
+        boolean iSCustomerHappy = true; //'is' and 'has' - good practice
+        boolean hasChildren = false;
+
+        byte myMinByteValue = Byte.MIN_VALUE;
+        byte myMaxByteValue = Byte.MAX_VALUE;
+        System.out.println(myMinByteValue);
+        System.out.println(myMaxByteValue);
+
+        short myMinShortValue = Short.MIN_VALUE;
+        short myMaxShortValue = Short.MAX_VALUE;
+        System.out.println(myMinShortValue);
+        System.out.println(myMaxShortValue);
+
+        byte myByte2 = 4;
+        short myShort2 = 12;
+        int myInt2 = 33;
+        long myLong3 = 50000L + (10 * (myByte2 + myShort2 + myInt2));
+        System.out.println(myLong3);
+
+        double pounds = 4;
+        double onePound = 0.4535;
+        double kilograms = pounds * onePound;
+        System.out.println(kilograms);
+
+        double one = 20.00;
+        double two = 80.00;
+        double sum1 = one + two * 100.00;
+        System.out.println(sum1);
+
+        double modu1 = sum1 % 40.00;
+        System.out.println(modu1);
+
+        boolean bool1 = true;
+        if (modu1 == 0)
+            System.out.println("it's okey!");
+        else
+            System.out.println("there is some modulo");
+
+        //
+
+        int score = 800;
+        int levelCompleted = 5;
+        int bonus = 100;
+        boolean gameOver = true;
+        if (gameOver) {
+            int finalScore = score + (levelCompleted * bonus);
+            System.out.println("Your final score is " + finalScore);
+        }
+
+        int newScoore = 10000;
+        int newLevelCompleted = 8;
+        int newBonus = 200;
+
+        if (gameOver) {
+            int finalScore2 = newScoore + (newLevelCompleted * newBonus);
+            System.out.println("Yeah = " + finalScore2);
+        }
+
+        score = 10000;
+        levelCompleted = 8;
+        bonus = 200;
+
+        if (gameOver) {
+            int finalScore = score + (levelCompleted * bonus);
+            System.out.println("Woohoo =  " + finalScore);
+        }
+
+        int highScorePosition = calculateHighScorePosition(1500);
+        displayHighScorePosition("Don ", highScorePosition);
+
+        highScorePosition = calculateHighScorePosition(900);
+        displayHighScorePosition("Bob ", highScorePosition);
+
+        highScorePosition = calculateHighScorePosition(400);
+        displayHighScorePosition("Percy ", highScorePosition);
+
+        highScorePosition = calculateHighScorePosition(50);
+        displayHighScorePosition("Gilbert ", highScorePosition);
+
+        double kilometersPerHour;
+        toMilesPerHour(-5.34);
+        toMilesPerHour(8.67);
+        toMilesPerHour(10.90);
+        toMilesPerHour(20.00);
+
+        int newScore = calculateScore("Adaś", 25);
+        System.out.println("new score is " + newScore);
+
+        calculateScore(75);
+
+        calcFeetAndInchesToCentimeters(7, 5);
+        calcFeetAndInchesToCentimeters(100);
+
+        getDurationString(211, 54);
+        getDurationString(800);
+
+        //____________________________________//
+
+        displayHighScorePosition("Adam ", 1002);
+
+
+        int value = 3;
+        if (value == 1) {
+            System.out.println("Val was 1");
+        } else if (value == 2) {
+            System.out.println("Val was 2");
+        } else {
+            System.out.println("Was not 1,2");
+        }
+
+        int switchValue = 1;
+        switch (switchValue) {
+            case 1:
+                System.out.println("Value was 1");
+                break;
+            case 2:
+                System.out.println("Value was 2");
+                break;
+            default:
+                System.out.println("Was not 1 or 2");
+                break;
+        }
+
+        char switchChar = 'C';
+        switch (switchChar) {
+            case 'A':
+                System.out.println("It's A");
+                break;
+            case 'B':
+                System.out.println("It's B");
+                break;
+            case 'C':
+                System.out.println("It's C");
+                break;
+            default:
+                System.out.println("Not found");
+                break;
+        }
+
+        String month = "January";
+        switch (month.toLowerCase()) {
+            case "january":
+                System.out.println("It's Jan");
+                break;
+        }
+
+        printDayOfTheWeek(3);
+
+        System.out.println("10000 at 2% interest = " + calculateInterest(10000.0, 2.0));
+        System.out.println("10000 at 3% interest = " + calculateInterest(10000.0, 3.0));
+        System.out.println("10000 at 4% interest = " + calculateInterest(10000.0, 4.0));
+        System.out.println("10000 at 5% interest = " + calculateInterest(10000.0, 5.0));
+
+        for (int i = 0; i < 5; i++) {
+            System.out.println("Loop " + i + " hello");
+        }
+
+        for (int j = 2; j < 9; j++) {
+            System.out.println("10000 at " + j + "% interest = " + (calculateInterest(10000.0, j)));
+        }
+
+        for (int j = 2; j < 9; j++) {   //"%.2f" zmniejsza liczbę miejsc po przecinku
+            System.out.println("10000 at " + j + "% interest = " + String.format("%.2f", calculateInterest(10000.0, j)));
+        }
+
+        for (int j = 8; j >= 2; j--) {   //"%.2f" zmniejsza liczbę miejsc po przecinku
+            System.out.println("10000 at " + j + "% interest = " + String.format("%.2f", calculateInterest(10000.0, j)));
+        }
+
+        for (int i = 10; i <= 50; i++) {
+            System.out.println(" Number " + i + " is " + isPrime(i));
+        }
+
+        int count = 0;   // prime numbers
+        for (int i = 10; i <= 50; i++) {
+            if (isPrime(i)) {
+                count++;
+                System.out.println("Number " + i + " is a prime number");
+                if (count == 3) {
+                    System.out.println("Exiting for loop");
+                    break;
+                }
+            }
+        }
+
+
+
+
+
+
+
+
+
+    }
+
+
+    // // // // //    methods    // // // // //
+
+    public static void calculateScore() {
+        System.out.println("Yes");
+    }
+
+    public static void displayHighScorePosition(String name, int position) {
+        System.out.println(name + "is on  position " + position);
+    }
+
+    public static int calculateHighScorePosition(int playerScore) {
+        if (playerScore > 1000) {
+            return 1;
+        } else if (playerScore > 500 && playerScore < 1000) {
+            return 2;
+        } else if (playerScore > 100 && playerScore < 500) {
+            return 3;
+        } else {
+            return 4;
+        }
+    }
+
+
+
+            public static void toMilesPerHour (double kilometersPerHour) {
+            if (kilometersPerHour <= 0) {
+                    System.out.println("-1");
+            } else if (kilometersPerHour > 0 && kilometersPerHour != 20){
+                double conventKilometersToMiles = 0.621504;
+                long longValue = (long)(kilometersPerHour*conventKilometersToMiles);
+                System.out.println("Przyjęty przelicznik to 1 mila = 0.6215 km");
+                System.out.println(kilometersPerHour + " km/h = " + longValue + " ml/h");
+                }
+            else if (kilometersPerHour == 20) {
+                long milesPerHour = (long)Math.round(kilometersPerHour/1.609);
+                System.out.println(milesPerHour);
+            }
+            }
+
+
+            public static int calculateScore(String playerName, int score){
+                System.out.println("player " + playerName + " scored " + score + " points ");
+                return score * 1000;
+            }
+
+            public static int calculateScore(int score){
+                System.out.println("Unnaned player scored " + score + " points ");
+                return score * 1000;
+            }
+
+            public static double calcFeetAndInchesToCentimeters (double feet, double inches){
+            if ((feet < 0) || ((inches < 0) || (inches > 12))){
+                return -1;
+            }
+            double centimeters = (feet * 12) *2.54;
+            centimeters += inches * 2.54;
+                System.out.println(feet + " feet " + inches + " inches = " + centimeters + " centimeters ");
+            return centimeters;
+            }
+
+        public static double calcFeetAndInchesToCentimeters (double inches){
+        if(inches < 0) {
+            return -1;
+        }
+        double feet = (int) inches / 12;
+        double remainingInches = (int) inches % 12;
+        System.out.println("inches is equal to "  + feet + " feet and " +remainingInches + " inches ");
+        return calcFeetAndInchesToCentimeters(feet, remainingInches);
+        }
+
+        public static void getDurationString(int minutes, int seconds){
+        if((minutes < 0)||(seconds < 0) || (seconds > 59)) {
+            System.out.println("invalid value");
+        } else {
+            int hour = minutes/60;
+            int restOfMin = minutes%60;
+            System.out.println(hour + "h " + restOfMin + "m " + seconds + "s" );
+        }
+        }
+
+        public static void getDurationString (int seconds){
+        if((seconds < 0)) {
+            System.out.println("invalid value");
+        } else {
+            int minutes = seconds/60;
+            int restOfSek = seconds%60;
+            System.out.println(minutes + "m "  + restOfSek + "s" );
+        }
+        }
+
+        //xxxxxxxxxxxxxxxxxxx
+
+        public static boolean isPrime (int n) {
+        if(n == 1) {
+            return false;
+        }
+        for(int i=2; i<=n/2; i++) {
+            if(n % i==0) {
+                return false;
+            }
+        }
+        return true;
+        }
+
+
+        public static double calculateInterest(double amount, double interestRate){
+        return (amount*(interestRate/100));
+        }
+
+
+        public static void printDayOfTheWeek(int day){
+        switch(day){
+            case 0:
+                System.out.println("Sunday");
+                break;
+            case 1:
+                System.out.println("Monday");
+                break;
+            case 2:
+                System.out.println("Tuesday");
+                break;
+            case 3:
+                System.out.println("Wednesday");
+                break;
+            case 4:
+                System.out.println("Thursday");
+                break;
+            case 5:
+                System.out.println("Friday");
+                break;
+            case 6:
+                System.out.println("Saturday");
+                break;
+            default:
+                System.out.println("Invalid");
+                break;
+            }
+         }
+
+
+}
+/*
+//java - czysta
+//    public class Hello {
+//        public String sayHello() {
+//        return "Hello";
+//        }}
+//
+//    public class Sample {
+//        public static void main (String[] args) {
+//        Hello hello = new Hello();
+//        hello.sayHello();
+//    }}
+
+
+//java - Spring
+//    @SpringBootApplication
+//    public class HelloApplication {
+//        @Autowired
+//        Hello hello;
+//
+//        public static void main (String[] args) {
+//        SpringApplication.run (HelloApplication.class, args);
+//        @PostConstruct
+//        public void init() {
+//        System.out.println (hello.sayHello());
+//    }}
+//
+//    @Service
+//    public class Hello {
+//        public String sayHello() {
+//        return "Hello";
+//        }}
+*/
+
+
+
+
+
+
