@@ -224,6 +224,9 @@ public class Main {
         System.out.println("10000 at 4% interest = " + calculateInterest(10000.0, 4.0));
         System.out.println("10000 at 5% interest = " + calculateInterest(10000.0, 5.0));
 
+
+
+        // for loop
         for (int i = 0; i < 5; i++) {
             System.out.println("Loop " + i + " hello");
         }
@@ -256,8 +259,120 @@ public class Main {
             }
         }
 
+        // for loop
+        int sum = 0;
+        int count2 = 0;
+        for (int i = 1; i <=1000;i++) {
+            if((i % 3 == 0) && (i % 5 == 0)) {
+                count2++;
+                sum+=i;
+                System.out.println("Found number = " + i);
+            }
+            if(count2 == 5) {
+                System.out.println("exit the loop2");
+                break;
+            }
+        }
+        System.out.println("Sum = " + sum);
+
+        // while loop
+        int count3 = 1;
+        while(count3 != 5) {
+            System.out.println("Count3 value is + " + count3);
+            count3++;
+        }
+        // while loop
+        count3 = 1;
+        while(true) {
+            if (count3 != 5) {
+                break;
+            }
+            System.out.println("Count3 value is + " + count3);
+            count3++;
+        }
+        // do-while loop
+        count3 = 1;
+        do {
+            System.out.println("Do-while count: " + count3);
+            count3++;
+
+            if(count3 > 100) {
+                break;
+            }
+
+        } while (count3!=5);
 
 
+
+
+
+        int evenNumbersFound = 0;
+        int number = 4;
+        int finishNumber = 20;
+        while (number <= finishNumber) {
+            number++;
+            if(!isEvenNumber(number)) {   // kontynuacja pętli
+                continue;
+            }
+            System.out.println(" Even number " + number);
+            evenNumbersFound++;
+            if(evenNumbersFound >= 6) {
+                break;
+            }
+        }
+        System.out.println(" Total even numbers found " + evenNumbersFound);
+
+
+
+
+//        for(number = 1; number <20; number++) {
+//            if (isEvenNumber(number)) {
+//                System.out.println("It is: " + number);
+//            }
+//        }
+        System.out.println("Sum digits is: " + sumDigits(125));
+
+
+// parsing values
+        String numberAsString = "2018";
+        System.out.println("number as string = " + numberAsString);
+
+        int numberFromString = Integer.parseInt(numberAsString);
+        System.out.println("number from string: " + numberFromString);
+
+        numberAsString += 1;
+        numberFromString += 1;
+        System.out.println(numberAsString);   // put number one after 2018
+        System.out.println(numberFromString); // add number
+
+        /*
+// reading user input
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Enter birth year: ");
+
+        boolean hasNextInt = scanner.hasNextInt();
+
+
+
+        if(hasNextInt) {
+            int yearOfBirth = scanner.nextInt();
+            scanner.nextLine();
+
+            System.out.println("Enter name: ");
+            String name = scanner.nextLine();
+            int age = 2023 - yearOfBirth;
+
+            if (age >= 0 && age <= 100) {
+                System.out.println("Your name is " + name + ", and you are " + age + " years old.");
+            } else {
+                System.out.println("Invalid");
+            }
+        } else {
+            System.out.println("Inncorect data");
+        }
+        scanner.close();
+        */
 
 
 
@@ -266,66 +381,67 @@ public class Main {
 
     }
 
-
+    ///////////////////////////////////////////
     // // // // //    methods    // // // // //
+    ///////////////////////////////////////////
 
-    public static void calculateScore() {
+        public static void calculateScore() {
         System.out.println("Yes");
     }
 
-    public static void displayHighScorePosition(String name, int position) {
-        System.out.println(name + "is on  position " + position);
-    }
-
-    public static int calculateHighScorePosition(int playerScore) {
-        if (playerScore > 1000) {
-            return 1;
-        } else if (playerScore > 500 && playerScore < 1000) {
-            return 2;
-        } else if (playerScore > 100 && playerScore < 500) {
-            return 3;
-        } else {
-            return 4;
+        public static void displayHighScorePosition(String name, int position) {
+            System.out.println(name + "is on  position " + position);
         }
-    }
 
-
-
-            public static void toMilesPerHour (double kilometersPerHour) {
-            if (kilometersPerHour <= 0) {
-                    System.out.println("-1");
-            } else if (kilometersPerHour > 0 && kilometersPerHour != 20){
-                double conventKilometersToMiles = 0.621504;
-                long longValue = (long)(kilometersPerHour*conventKilometersToMiles);
-                System.out.println("Przyjęty przelicznik to 1 mila = 0.6215 km");
-                System.out.println(kilometersPerHour + " km/h = " + longValue + " ml/h");
-                }
-            else if (kilometersPerHour == 20) {
-                long milesPerHour = (long)Math.round(kilometersPerHour/1.609);
-                System.out.println(milesPerHour);
+        public static int calculateHighScorePosition(int playerScore) {
+            if (playerScore > 1000) {
+                return 1;
+            } else if (playerScore > 500 && playerScore < 1000) {
+                return 2;
+            } else if (playerScore > 100 && playerScore < 500) {
+                return 3;
+            } else {
+                return 4;
             }
-            }
+        }
 
 
-            public static int calculateScore(String playerName, int score){
-                System.out.println("player " + playerName + " scored " + score + " points ");
-                return score * 1000;
-            }
 
-            public static int calculateScore(int score){
-                System.out.println("Unnaned player scored " + score + " points ");
-                return score * 1000;
+        public static void toMilesPerHour (double kilometersPerHour) {
+        if (kilometersPerHour <= 0) {
+                System.out.println("-1");
+        } else if (kilometersPerHour > 0 && kilometersPerHour != 20){
+            double conventKilometersToMiles = 0.621504;
+            long longValue = (long)(kilometersPerHour*conventKilometersToMiles);
+            System.out.println("Przyjęty przelicznik to 1 mila = 0.6215 km");
+            System.out.println(kilometersPerHour + " km/h = " + longValue + " ml/h");
             }
+        else if (kilometersPerHour == 20) {
+            long milesPerHour = (long)Math.round(kilometersPerHour/1.609);
+            System.out.println(milesPerHour);
+        }
+        }
 
-            public static double calcFeetAndInchesToCentimeters (double feet, double inches){
-            if ((feet < 0) || ((inches < 0) || (inches > 12))){
-                return -1;
-            }
-            double centimeters = (feet * 12) *2.54;
-            centimeters += inches * 2.54;
-                System.out.println(feet + " feet " + inches + " inches = " + centimeters + " centimeters ");
-            return centimeters;
-            }
+
+        public static int calculateScore(String playerName, int score){
+            System.out.println("player " + playerName + " scored " + score + " points ");
+            return score * 1000;
+        }
+
+        public static int calculateScore(int score){
+            System.out.println("Unnaned player scored " + score + " points ");
+            return score * 1000;
+        }
+
+        public static double calcFeetAndInchesToCentimeters (double feet, double inches){
+        if ((feet < 0) || ((inches < 0) || (inches > 12))){
+            return -1;
+        }
+        double centimeters = (feet * 12) *2.54;
+        centimeters += inches * 2.54;
+            System.out.println(feet + " feet " + inches + " inches = " + centimeters + " centimeters ");
+        return centimeters;
+        }
 
         public static double calcFeetAndInchesToCentimeters (double inches){
         if(inches < 0) {
@@ -357,7 +473,6 @@ public class Main {
         }
         }
 
-        //xxxxxxxxxxxxxxxxxxx
 
         public static boolean isPrime (int n) {
         if(n == 1) {
@@ -405,6 +520,32 @@ public class Main {
                 break;
             }
          }
+
+    public static int sumDigits (int number) {
+        if (number < 10) {
+            return -1;
+        }
+        int sum = 0;
+        //125 -> 125/10=12 -> 12*10=120 -> 125-120=5
+        while (number > 0) {
+            int digit = number % 10; //extract the least-significant digit
+            sum += digit;
+
+            number /=10; //same as number = number/10
+        }
+        return sum;
+    }
+
+    public static boolean isEvenNumber(int number) {
+        if ((number % 2) == 0)   {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+
+
 
 
 }
