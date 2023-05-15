@@ -2,6 +2,46 @@ package org.example;
 
 public class Main {
     public static void main(String[] args) {
+
+        // ternary operator
+        String makeOfCar = "Ford";
+        boolean isDomestic = makeOfCar == "Ford" ? true : false ;
+            if(isDomestic) {
+                System.out.println("This car is domestic");
+            } else {
+                System.out.println("It's foregin car");
+            }
+
+
+
+        int highScorePsition = calculateHighScorePsition (1500);
+        displayHighScorePsition("Tim",highScorePsition);
+
+        highScorePsition = calculateHighScorePsition(500);
+        displayHighScorePsition("Marcin",highScorePsition);
+
+        highScorePsition = calculateHighScorePsition(250);
+        displayHighScorePsition("Sam",highScorePsition);
+
+
+
+
+
+        //operator chalange
+        double value1 = 20.00d;
+        double value2 = 80.00d;
+        double valueSum = ((value1 + value2)*100d);
+        double valueSumModulo = valueSum % 40.00d;
+            boolean valueoolean1 = valueSumModulo == 0.0d ? true : false;
+                    if (valueoolean1){
+                        System.out.println("valSum modulo 40.0 is equal 0.0");
+                    } else {
+                        System.out.println("valSum modulo 40.0 is NOT equal 0.0");
+                    }
+
+
+
+
         int myFirstNumber = (10 + 5) + (2 * 10);
         int mySecondNumber = 12;
         int myThirdNumber = 6;
@@ -380,10 +420,37 @@ public class Main {
 
 
     }
-
+    ///////////////////////////////////////////
+    ///////////////////////////////////////////
+    ///////////////////////////////////////////
+    ///////////////////////////////////////////
+    ///////////////////////////////////////////
     ///////////////////////////////////////////
     // // // // //    methods    // // // // //
     ///////////////////////////////////////////
+    ///////////////////////////////////////////
+    ///////////////////////////////////////////
+    ///////////////////////////////////////////
+    ///////////////////////////////////////////
+    ///////////////////////////////////////////
+
+        public static void displayHighScorePsition(String name, int highScorePsition) {
+            System.out.println(name + " managed to get into position " + highScorePsition + " on the high score list");
+        }
+
+        public static int calculateHighScorePsition(int playerScore) {
+            if (playerScore >= 1000) {
+                return 1;
+            } else if ((playerScore >= 500) && (playerScore < 1000)) {
+                return 2;
+            } else if ((playerScore >= 100) && (playerScore < 500)) {
+                return 3;
+            } else {
+                return 4;
+            }
+        }
+
+
 
         public static void calculateScore() {
         System.out.println("Yes");
