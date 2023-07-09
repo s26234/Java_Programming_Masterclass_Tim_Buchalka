@@ -414,9 +414,14 @@ public class Main {
         scanner.close();
         */
 
+    // method overloading
+        int newCalculateScoree = calculateScoree("Adam", 120);
+        System.out.println(newCalculateScoree);
 
+        int newCalculateScore = calculateScoree(75);
+        System.out.println(newCalculateScore);
 
-
+        System.out.println("New score is " +calculateScoree(34)+ " points"); //magic :)
 
 
     }
@@ -433,6 +438,23 @@ public class Main {
     ///////////////////////////////////////////
     ///////////////////////////////////////////
     ///////////////////////////////////////////
+
+
+
+        public static int calculateScoree(String playerName, int score){
+            System.out.println("Player " +playerName+ " scored " +score+ " points" );
+            return score+1000;
+        }
+//        public static int calculateScoree(int score){
+//            System.out.println("Unnamed player scored " +score+ " points" );
+//            return score+1000;
+//        }
+
+        public static int calculateScoree(int score){
+            return calculateScoree("Tim", score);
+        }
+
+
 
         public static void displayHighScorePsition(String name, int highScorePsition) {
             System.out.println(name + " managed to get into position " + highScorePsition + " on the high score list");
