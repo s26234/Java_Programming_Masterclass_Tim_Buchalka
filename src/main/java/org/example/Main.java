@@ -433,6 +433,43 @@ public class Main {
         printDayOfWeek(0);
         printDayOfWeekIf(2);
         printDayOfWeekIff(5);
+
+        System.out.println("10000 at 2% interest = " + calculateInterest(10000.0, 2.0));
+
+        for (double rate = 7.5; rate <= 10.0; rate += 0.25) {
+            double interestAmount = calculateInterest(100, rate);
+            System.out.println("100 at " + rate + "% interest = " + interestAmount);
+        }
+
+//        Scanner scanner = new Scanner(System.in);
+//        System.out.println("Enter string: ");
+//        String input = scanner.nextLine();
+//        int vowelCount = countVowels(input);
+//        System.out.println("Count: " + vowelCount);
+//        scanner.close();
+        // lub:
+        int vowelCount = countVowels("Jeszczea");
+        System.out.println("Count: " + vowelCount);
+
+        // for loop
+        System.out.println("0 is " + (isPrime2(0) ? "" : "NOT") + " a prime number");
+        System.out.println("2 is " + (isPrime2(2) ? "" : "NOT") + " a prime number");
+        System.out.println("19 is " + (isPrime2(19) ? "" : "NOT") + " a prime number");
+
+        int counter = 0;
+        for (int i = 21; i < 50; i++) {
+            if (isPrime2(i)) {
+                System.out.println("number " + i + " is a prime number");
+                counter++;
+                if (counter == 3) {
+                    System.out.println("finding 3 - exiting");
+                    break;
+                }
+            }
+        }
+        System.out.println("Total amount of prime numbers is : " + counter);
+
+
     }
     ///////////////////////////////////////////
     ///////////////////////////////////////////
@@ -448,6 +485,36 @@ public class Main {
     ///////////////////////////////////////////
     ///////////////////////////////////////////
 
+
+
+
+    public static boolean isPrime2(int wholeNumber) {
+        if (wholeNumber <= 2) {
+            return (wholeNumber == 2);
+        }
+
+        for (int divisor = 2; divisor < wholeNumber; divisor++) {
+            if (wholeNumber % divisor == 0) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    // count vowels
+    public static int countVowels(String str) {
+        int count = 0;
+        String vowels = "AEIOUaeiou";
+
+        for (char c : str.toCharArray()) {
+            if (vowels.indexOf(c) != -1) {
+                count++;
+            }
+        }
+        return count;
+    }
+
+
     //enhanced switch statement
     public static void printDayOfWeek(int day) {
         String dayOfWeek = switch (day) {
@@ -462,6 +529,7 @@ public class Main {
         };
         System.out.println(day + " is " + dayOfWeek);
     }
+
     //if-else instead switch
     public static void printDayOfWeekIf(int day) {
         if (day == 0) {
@@ -472,6 +540,7 @@ public class Main {
             System.out.println("Invalid val");
         }
     }
+
     //if-else
     public static void printDayOfWeekIff(int day) {
         String dayOfWeek = "Invalid";
