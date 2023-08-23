@@ -448,29 +448,33 @@ public class Main {
 //        System.out.println("Count: " + vowelCount);
 //        scanner.close();
         // lub:
-        int vowelCount = countVowels("Jeszczea");
-        System.out.println("Count: " + vowelCount);
+//        int vowelCount = countVowels("Jeszczea");
+//        System.out.println("Count: " + vowelCount);
+//
+//        // for loop
+//        System.out.println("0 is " + (isPrime2(0) ? "" : "NOT") + " a prime number");
+//        System.out.println("2 is " + (isPrime2(2) ? "" : "NOT") + " a prime number");
+//        System.out.println("19 is " + (isPrime2(19) ? "" : "NOT") + " a prime number");
+//
+//        int counter = 0;
+//        for (int i = 21; i < 50; i++) {
+//            if (isPrime2(i)) {
+//                System.out.println("number " + i + " is a prime number");
+//                counter++;
+//                if (counter == 3) {
+//                    System.out.println("finding 3 - exiting");
+//                    break;
+//                }
+//            }
+//        }
+//        System.out.println("Total amount of prime numbers is : " + counter);
 
-        // for loop
-        System.out.println("0 is " + (isPrime2(0) ? "" : "NOT") + " a prime number");
-        System.out.println("2 is " + (isPrime2(2) ? "" : "NOT") + " a prime number");
-        System.out.println("19 is " + (isPrime2(19) ? "" : "NOT") + " a prime number");
-
-        int counter = 0;
-        for (int i = 21; i < 50; i++) {
-            if (isPrime2(i)) {
-                System.out.println("number " + i + " is a prime number");
-                counter++;
-                if (counter == 3) {
-                    System.out.println("finding 3 - exiting");
-                    break;
-                }
-            }
-        }
-        System.out.println("Total amount of prime numbers is : " + counter);
-
+        isOdd(21);
+        sumOdd(1,11);
 
     }
+
+
     ///////////////////////////////////////////
     ///////////////////////////////////////////
     ///////////////////////////////////////////
@@ -486,307 +490,324 @@ public class Main {
     ///////////////////////////////////////////
 
 
+    public static boolean isOdd(int number) {
+        if (number < 0) {
+            return false;
+        } else return true;
+    }
 
-
-    public static boolean isPrime2(int wholeNumber) {
-        if (wholeNumber <= 2) {
-            return (wholeNumber == 2);
+        public static boolean sumOdd ( int start, int end){
+            int total = 0;
+            for (int i = start; i < end; i++) {
+                total += i;
+                System.out.println(i);
+            }
+            return false;
         }
 
-        for (int divisor = 2; divisor < wholeNumber; divisor++) {
-            if (wholeNumber % divisor == 0) {
-                return false;
+        public static boolean isPrime2 ( int wholeNumber){
+            if (wholeNumber <= 2) {
+                return (wholeNumber == 2);
+            }
+
+            for (int divisor = 2; divisor < wholeNumber; divisor++) {
+                if (wholeNumber % divisor == 0) {
+                    return false;
+                }
+            }
+            return true;
+        }
+
+        // count vowels
+        public static int countVowels (String str){
+            int count = 0;
+            String vowels = "AEIOUaeiou";
+
+            for (char c : str.toCharArray()) {
+                if (vowels.indexOf(c) != -1) {
+                    count++;
+                }
+            }
+            return count;
+        }
+
+
+        //enhanced switch statement
+        public static void printDayOfWeek ( int day){
+            String dayOfWeek = switch (day) {
+                case 0 -> "Sunday";
+                case 1 -> "Monday";
+                case 2 -> "Tuesday";
+                case 3 -> "Wednesday";
+                case 4 -> "Thursday";
+                case 5 -> "Friday";
+                case 6 -> "Saturday";
+                default -> " is not there";
+            };
+            System.out.println(day + " is " + dayOfWeek);
+        }
+
+        //if-else instead switch
+        public static void printDayOfWeekIf ( int day){
+            if (day == 0) {
+                System.out.println("Sunday");
+            } else if (day == 1) {
+                System.out.println("Monday");
+            } else {
+                System.out.println("Invalid val");
             }
         }
-        return true;
-    }
 
-    // count vowels
-    public static int countVowels(String str) {
-        int count = 0;
-        String vowels = "AEIOUaeiou";
-
-        for (char c : str.toCharArray()) {
-            if (vowels.indexOf(c) != -1) {
-                count++;
+        //if-else
+        public static void printDayOfWeekIff ( int day){
+            String dayOfWeek = "Invalid";
+            if (day == 2) {
+                dayOfWeek = "Tuesday";
+            } else if (day == 3) {
+                dayOfWeek = "Wednesday";
+            } else if (day == 4) {
+                dayOfWeek = "Thursday";
+            } else {
+                System.out.println(day + " = " + dayOfWeek);
             }
-        }
-        return count;
-    }
 
-
-    //enhanced switch statement
-    public static void printDayOfWeek(int day) {
-        String dayOfWeek = switch (day) {
-            case 0 -> "Sunday";
-            case 1 -> "Monday";
-            case 2 -> "Tuesday";
-            case 3 -> "Wednesday";
-            case 4 -> "Thursday";
-            case 5 -> "Friday";
-            case 6 -> "Saturday";
-            default -> " is not there";
-        };
-        System.out.println(day + " is " + dayOfWeek);
-    }
-
-    //if-else instead switch
-    public static void printDayOfWeekIf(int day) {
-        if (day == 0) {
-            System.out.println("Sunday");
-        } else if (day == 1) {
-            System.out.println("Monday");
-        } else {
-            System.out.println("Invalid val");
-        }
-    }
-
-    //if-else
-    public static void printDayOfWeekIff(int day) {
-        String dayOfWeek = "Invalid";
-        if (day == 2) {
-            dayOfWeek = "Tuesday";
-        } else if (day == 3) {
-            dayOfWeek = "Wednesday";
-        } else if (day == 4) {
-            dayOfWeek = "Thursday";
-        } else {
-            System.out.println(day + " = " + dayOfWeek);
         }
 
-    }
-
-    //enhanced switch statement
-    public static String checkMonth(String month) {
-        return switch (month) {
-            case "JANUARY" -> "1st";
-            case "MAY" -> "5th";
-            default -> "bad";
-        };
-    }
-
-    public static String getDurationSstring(int seconds) {
-        if (seconds <= 60) {
-            int minutes = seconds / 60;
-            return getDurationSstring(minutes, seconds);
+        //enhanced switch statement
+        public static String checkMonth (String month){
+            return switch (month) {
+                case "JANUARY" -> "1st";
+                case "MAY" -> "5th";
+                default -> "bad";
+            };
         }
-        return "";
-    }
 
-    public static String getDurationSstring(int minutes, int seconds) {
-        if (minutes >= 60 && seconds >= 0 && seconds <= 60) {
-            int hours = minutes / 60;
-            int minutesRest = minutes % 60;
-            int secondsRest = seconds % 60;
-            System.out.println(hours + "h " + minutesRest + "min " + secondsRest + "sek");
+        public static String getDurationSstring ( int seconds){
+            if (seconds <= 60) {
+                int minutes = seconds / 60;
+                return getDurationSstring(minutes, seconds);
+            }
+            return "";
         }
-        return "";
-    }
 
-    public static int convertToCentimeters(int heightInch) {
-        double inch = 2.54;
-        System.out.println("Height in inch: " + heightInch + " converted to height in centimeters is " + heightInch * inch + " cm");
-        return 0;
+        public static String getDurationSstring ( int minutes, int seconds){
+            if (minutes >= 60 && seconds >= 0 && seconds <= 60) {
+                int hours = minutes / 60;
+                int minutesRest = minutes % 60;
+                int secondsRest = seconds % 60;
+                System.out.println(hours + "h " + minutesRest + "min " + secondsRest + "sek");
+            }
+            return "";
+        }
 
-    }
+        public static int convertToCentimeters ( int heightInch){
+            double inch = 2.54;
+            System.out.println("Height in inch: " + heightInch + " converted to height in centimeters is " + heightInch * inch + " cm");
+            return 0;
 
-    public static int convertToCentimeters(int footInch, int heightInch) {
-        double inch = 2.54;
-        double convert = (((footInch * 12) + heightInch) * inch);
-        System.out.println("Height: " + footInch + " foot and " + heightInch + " inches is " + convert + " cm");
-        return 0;
-    }
+        }
 
-    public static int calculateScoree(String playerName, int score) {
-        System.out.println("Player " + playerName + " scored " + score + " points");
-        return score + 1000;
-    }
-//        public static int calculateScoree(int score){
-//            System.out.println("Unnamed player scored " +score+ " points" );
-//            return score+1000;
+        public static int convertToCentimeters ( int footInch, int heightInch){
+            double inch = 2.54;
+            double convert = (((footInch * 12) + heightInch) * inch);
+            System.out.println("Height: " + footInch + " foot and " + heightInch + " inches is " + convert + " cm");
+            return 0;
+        }
+
+        public static int calculateScoree (String playerName,int score){
+            System.out.println("Player " + playerName + " scored " + score + " points");
+            return score + 1000;
+        }
+        public static int calculateScoree(int score){
+            System.out.println("Unnamed player scored " +score+ " points" );
+            return score+1000;
+        }
+
+//        public static int calculateScoree ( int score){
+//            return calculateScoree("Tim", score);
 //        }
 
-    public static int calculateScoree(int score) {
-        return calculateScoree("Tim", score);
-    }
 
-
-    public static void displayHighScorePsition(String name, int highScorePsition) {
-        System.out.println(name + " managed to get into position " + highScorePsition + " on the high score list");
-    }
-
-    public static int calculateHighScorePsition(int playerScore) {
-        if (playerScore >= 1000) {
-            return 1;
-        } else if ((playerScore >= 500) && (playerScore < 1000)) {
-            return 2;
-        } else if ((playerScore >= 100) && (playerScore < 500)) {
-            return 3;
-        } else {
-            return 4;
+        public static void displayHighScorePsition (String name,int highScorePsition){
+            System.out.println(name + " managed to get into position " + highScorePsition + " on the high score list");
         }
-    }
 
-
-    public static void calculateScore() {
-        System.out.println("Yes");
-    }
-
-    public static void displayHighScorePosition(String name, int position) {
-        System.out.println(name + "is on  position " + position);
-    }
-
-    public static int calculateHighScorePosition(int playerScore) {
-        if (playerScore > 1000) {
-            return 1;
-        } else if (playerScore > 500 && playerScore < 1000) {
-            return 2;
-        } else if (playerScore > 100 && playerScore < 500) {
-            return 3;
-        } else {
-            return 4;
+        public static int calculateHighScorePsition ( int playerScore){
+            if (playerScore >= 1000) {
+                return 1;
+            } else if ((playerScore >= 500) && (playerScore < 1000)) {
+                return 2;
+            } else if ((playerScore >= 100) && (playerScore < 500)) {
+                return 3;
+            } else {
+                return 4;
+            }
         }
-    }
 
 
-    public static void toMilesPerHour(double kilometersPerHour) {
-        if (kilometersPerHour <= 0) {
-            System.out.println("-1");
-        } else if (kilometersPerHour > 0 && kilometersPerHour != 20) {
-            double conventKilometersToMiles = 0.621504;
-            long longValue = (long) (kilometersPerHour * conventKilometersToMiles);
-            System.out.println("Przyjęty przelicznik to 1 mila = 0.6215 km");
-            System.out.println(kilometersPerHour + " km/h = " + longValue + " ml/h");
-        } else if (kilometersPerHour == 20) {
-            long milesPerHour = (long) Math.round(kilometersPerHour / 1.609);
-            System.out.println(milesPerHour);
+        public static void calculateScore () {
+            System.out.println("Yes");
         }
-    }
 
-
-    public static int calculateScore(String playerName, int score) {
-        System.out.println("player " + playerName + " scored " + score + " points ");
-        return score * 1000;
-    }
-
-    public static int calculateScore(int score) {
-        System.out.println("Unnaned player scored " + score + " points ");
-        return score * 1000;
-    }
-
-    public static double calcFeetAndInchesToCentimeters(double feet, double inches) {
-        if ((feet < 0) || ((inches < 0) || (inches > 12))) {
-            return -1;
+        public static void displayHighScorePosition (String name,int position){
+            System.out.println(name + "is on  position " + position);
         }
-        double centimeters = (feet * 12) * 2.54;
-        centimeters += inches * 2.54;
-        System.out.println(feet + " feet " + inches + " inches = " + centimeters + " centimeters ");
-        return centimeters;
-    }
 
-    public static double calcFeetAndInchesToCentimeters(double inches) {
-        if (inches < 0) {
-            return -1;
+        public static int calculateHighScorePosition ( int playerScore){
+            if (playerScore > 1000) {
+                return 1;
+            } else if (playerScore > 500 && playerScore < 1000) {
+                return 2;
+            } else if (playerScore > 100 && playerScore < 500) {
+                return 3;
+            } else {
+                return 4;
+            }
         }
-        double feet = (int) inches / 12;
-        double remainingInches = (int) inches % 12;
-        System.out.println("inches is equal to " + feet + " feet and " + remainingInches + " inches ");
-        return calcFeetAndInchesToCentimeters(feet, remainingInches);
-    }
 
-    public static void getDurationString(int minutes, int seconds) {
-        if ((minutes < 0) || (seconds < 0) || (seconds > 59)) {
-            System.out.println("invalid value");
-        } else {
-            int hour = minutes / 60;
-            int restOfMin = minutes % 60;
-            System.out.println(hour + "h " + restOfMin + "m " + seconds + "s");
+
+        public static void toMilesPerHour ( double kilometersPerHour){
+            if (kilometersPerHour <= 0) {
+                System.out.println("-1");
+            } else if (kilometersPerHour > 0 && kilometersPerHour != 20) {
+                double conventKilometersToMiles = 0.621504;
+                long longValue = (long) (kilometersPerHour * conventKilometersToMiles);
+                System.out.println("Przyjęty przelicznik to 1 mila = 0.6215 km");
+                System.out.println(kilometersPerHour + " km/h = " + longValue + " ml/h");
+            } else if (kilometersPerHour == 20) {
+                long milesPerHour = (long) Math.round(kilometersPerHour / 1.609);
+                System.out.println(milesPerHour);
+            }
         }
-    }
 
-    public static void getDurationString(int seconds) {
-        if ((seconds < 0)) {
-            System.out.println("invalid value");
-        } else {
-            int minutes = seconds / 60;
-            int restOfSek = seconds % 60;
-            System.out.println(minutes + "m " + restOfSek + "s");
+
+        public static int calculateScore (String playerName,int score){
+            System.out.println("player " + playerName + " scored " + score + " points ");
+            return score * 1000;
         }
-    }
 
-
-    public static boolean isPrime(int n) {
-        if (n == 1) {
-            return false;
+        public static int calculateScore ( int score){
+            System.out.println("Unnaned player scored " + score + " points ");
+            return score * 1000;
         }
-        for (int i = 2; i <= n / 2; i++) {
-            if (n % i == 0) {
+
+        public static double calcFeetAndInchesToCentimeters ( double feet, double inches){
+            if ((feet < 0) || ((inches < 0) || (inches > 12))) {
+                return -1;
+            }
+            double centimeters = (feet * 12) * 2.54;
+            centimeters += inches * 2.54;
+            System.out.println(feet + " feet " + inches + " inches = " + centimeters + " centimeters ");
+            return centimeters;
+        }
+
+        public static double calcFeetAndInchesToCentimeters ( double inches){
+            if (inches < 0) {
+                return -1;
+            }
+            double feet = (int) inches / 12;
+            double remainingInches = (int) inches % 12;
+            System.out.println("inches is equal to " + feet + " feet and " + remainingInches + " inches ");
+            return calcFeetAndInchesToCentimeters(feet, remainingInches);
+        }
+
+        public static void getDurationString ( int minutes, int seconds){
+            if ((minutes < 0) || (seconds < 0) || (seconds > 59)) {
+                System.out.println("invalid value");
+            } else {
+                int hour = minutes / 60;
+                int restOfMin = minutes % 60;
+                System.out.println(hour + "h " + restOfMin + "m " + seconds + "s");
+            }
+        }
+
+        public static void getDurationString ( int seconds){
+            if ((seconds < 0)) {
+                System.out.println("invalid value");
+            } else {
+                int minutes = seconds / 60;
+                int restOfSek = seconds % 60;
+                System.out.println(minutes + "m " + restOfSek + "s");
+            }
+        }
+
+
+        public static boolean isPrime ( int n){
+            if (n == 1) {
+                return false;
+            }
+            for (int i = 2; i <= n / 2; i++) {
+                if (n % i == 0) {
+                    return false;
+                }
+            }
+            return true;
+        }
+
+
+        public static double calculateInterest ( double amount, double interestRate){
+            return (amount * (interestRate / 100));
+        }
+
+
+        public static void printDayOfTheWeek ( int day){
+            switch (day) {
+                case 0:
+                    System.out.println("Sunday");
+                    break;
+                case 1:
+                    System.out.println("Monday");
+                    break;
+                case 2:
+                    System.out.println("Tuesday");
+                    break;
+                case 3:
+                    System.out.println("Wednesday");
+                    break;
+                case 4:
+                    System.out.println("Thursday");
+                    break;
+                case 5:
+                    System.out.println("Friday");
+                    break;
+                case 6:
+                    System.out.println("Saturday");
+                    break;
+                default:
+                    System.out.println("Invalid");
+                    break;
+            }
+        }
+
+        public static int sumDigits ( int number){
+            if (number < 10) {
+                return -1;
+            }
+            int sum = 0;
+            //125 -> 125/10=12 -> 12*10=120 -> 125-120=5
+            while (number > 0) {
+                int digit = number % 10; //extract the least-significant digit
+                sum += digit;
+
+                number /= 10; //same as number = number/10
+            }
+            return sum;
+        }
+
+        public static boolean isEvenNumber ( int number){
+            if ((number % 2) == 0) {
+                return true;
+            } else {
                 return false;
             }
         }
-        return true;
+
+
     }
 
 
-    public static double calculateInterest(double amount, double interestRate) {
-        return (amount * (interestRate / 100));
-    }
 
 
-    public static void printDayOfTheWeek(int day) {
-        switch (day) {
-            case 0:
-                System.out.println("Sunday");
-                break;
-            case 1:
-                System.out.println("Monday");
-                break;
-            case 2:
-                System.out.println("Tuesday");
-                break;
-            case 3:
-                System.out.println("Wednesday");
-                break;
-            case 4:
-                System.out.println("Thursday");
-                break;
-            case 5:
-                System.out.println("Friday");
-                break;
-            case 6:
-                System.out.println("Saturday");
-                break;
-            default:
-                System.out.println("Invalid");
-                break;
-        }
-    }
-
-    public static int sumDigits(int number) {
-        if (number < 10) {
-            return -1;
-        }
-        int sum = 0;
-        //125 -> 125/10=12 -> 12*10=120 -> 125-120=5
-        while (number > 0) {
-            int digit = number % 10; //extract the least-significant digit
-            sum += digit;
-
-            number /= 10; //same as number = number/10
-        }
-        return sum;
-    }
-
-    public static boolean isEvenNumber(int number) {
-        if ((number % 2) == 0) {
-            return true;
-        } else {
-            return false;
-        }
-    }
-
-
-}
 /*
 //java - czysta
 //    public class Hello {
