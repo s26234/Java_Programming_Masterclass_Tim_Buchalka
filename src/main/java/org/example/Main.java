@@ -1,7 +1,14 @@
 package org.example;
 
+import java.io.IOException;
+import java.util.Date;
+
 public class Main {
     public static void main(String[] args) {
+
+        Date dateNow = new Date();
+
+        System.out.println(dateNow);
 
         // ternary operator
         String makeOfCar = "Ford";
@@ -469,8 +476,23 @@ public class Main {
 //        }
 //        System.out.println("Total amount of prime numbers is : " + counter);
 
-        isOdd(21);
-        sumOdd(1,11);
+        isOdd(-2);
+        sumOdd(1,6);
+
+        Main main1 = new Main();
+//        main1.m();
+//        main1.n();
+        main1.p();
+        //main1.methodExep();
+
+
+       Bike03 myBike03 = new Bike03();
+       myBike03.run01();
+
+
+
+
+
 
     }
 
@@ -490,10 +512,40 @@ public class Main {
     ///////////////////////////////////////////
 
 
+
+
+
+    void m() throws IOException {
+        throw new IOException("just error"); //checked exception
+    }
+
+    void n() throws IOException {
+        m();
+    }
+
+    void p() {
+        try {
+            n();
+        } catch (Exception ExOfP) {
+            System.out.println("exception handled");
+        }
+    }
+
+    void methodExep() throws IOException {
+        System.out.println("device must be checked");
+    }
+
+
+
+
     public static boolean isOdd(int number) {
         if (number < 0) {
+            System.out.println("-1");
             return false;
-        } else return true;
+        } else {
+            System.out.println(number);
+            return true;
+        }
     }
 
         public static boolean sumOdd ( int start, int end){
@@ -530,6 +582,7 @@ public class Main {
             }
             return count;
         }
+
 
 
         //enhanced switch statement
