@@ -489,6 +489,31 @@ public class Main {
        Bike03 myBike03 = new Bike03();
        myBike03.run01();
 
+        int yearCheck = 2024;
+        boolean leap01 = false;
+
+
+        // DOKONCZYC ZA DNIA - COS NIE STYKA
+//        if(yearCheck%4 == 0) {
+//            if(yearCheck%100 == 0) {
+//                if (yearCheck % 400 == 0) {
+//                    leap01 = true;
+//                } else {
+//                    leap01 = false;
+//                }
+//            else {
+//                leap01 = true;
+//                }
+//            else {
+//                leap01 = false;
+//                }
+//            }
+//        }
+
+
+        Honda hondaBike = new Honda();
+        hondaBike.run01();
+
 
 
 
