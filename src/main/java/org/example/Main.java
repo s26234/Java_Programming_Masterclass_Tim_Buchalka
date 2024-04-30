@@ -550,8 +550,31 @@ public class Main {
 //        }
 
 
+//        // sunny number example
+//        Scanner scaneerSunny = new Scanner(System.in);
+//        System.out.println("Emter number: ");
+//        int eN = scaneerSunny.nextInt();
 
+        // find duplicates
+        String stringWithDupli = "Big black bug a bit big and black";
+        int counterDuplicates = 0;
+        stringWithDupli = stringWithDupli.toLowerCase();
+        String separateWords[] = stringWithDupli.split(" ");
 
+        System.out.println("Duplicats: ");
+        for (int i = 0; i < separateWords.length; i++) {
+            counterDuplicates = 1;
+            for (int j = i +1; j < separateWords.length; j++) {
+                if(separateWords[i].equals(separateWords[j])) {
+                    counterDuplicates++;
+                    separateWords[j] = "0";
+                }
+            }
+            if(counterDuplicates >1 && separateWords[i] !="0") {
+                System.out.println(separateWords[i]);
+            }
+
+        }
 
 
 
@@ -578,6 +601,10 @@ public class Main {
     ///////////////////////////////////////////
 
 
+
+
+
+    //sunny number
 
 
 
