@@ -514,6 +514,47 @@ public class Main {
         Honda hondaBike = new Honda();
         hondaBike.run01();
 
+        //count numbers of chracters
+        String stringExample01 = "This Is an example that change amount of letters";
+        int countChar01 = 0;
+
+        for(int i = 0; i < stringExample01.length(); i++) {
+            if(stringExample01.charAt(i) != ' ') {
+                countChar01++;
+            }
+        }
+        System.out.println(countChar01);
+
+//        // divide string
+//        String simpleStringToDivide = "aaaabbbbcccc";
+//        int lehghtOf = simpleStringToDivide.length();
+//        int amountOfDivision = 3;
+//        int temp01 = 0 ;
+//        int charsAmount = lehghtOf/amountOfDivision;
+//
+//        String[] equalString = new String[amountOfDivision];
+//
+//        if(lehghtOf % amountOfDivision != 0) {
+//            System.out.println(" o - oo it cannot be divided into");
+//        } else{
+//            for(int i = 0; i <lehghtOf; i++) {
+//                //dividing string in n equal parts
+//                String part = simpleStringToDivide.substring(i,i+charsAmount);
+//                equalString[temp01] = part;
+//                temp01++;
+//            }
+//            System.out.println(amountOfDivision + " parts is divided string");
+//            for(int i = 0; i <equalString.length; i++) {
+//                System.out.println(equalString[i]);
+//            }
+//        }
+
+
+
+
+
+
+
 
 
 
