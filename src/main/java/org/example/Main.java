@@ -576,7 +576,14 @@ public class Main {
 
         }
 
-
+          int[] arrInt = new int[] {25,11,7,75,56};
+           int maxInt = arrInt[0];
+           for(int i = 1; i < arrInt.length; i++) {
+               if(arrInt[i] >maxInt) {
+                   maxInt = arrInt[i];
+               }
+               System.out.println("max element: " + maxInt);
+           }
 
 
 
