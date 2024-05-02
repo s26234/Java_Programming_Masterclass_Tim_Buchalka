@@ -576,7 +576,7 @@ public class Main {
 
         }
 
-          int[] arrInt = new int[] {25,11,7,75,56};
+          int[] arrInt = new int[] {25,11,8,75,56};
            int maxInt = arrInt[0];
            for(int i = 1; i < arrInt.length; i++) {
                if(arrInt[i] >maxInt) {
@@ -585,6 +585,21 @@ public class Main {
                System.out.println("max element: " + maxInt);
            }
 
+           int sumArray01 = 0;
+            for(int i = 1; i < arrInt.length; i++) {
+                sumArray01 = sumArray01 + arrInt[i];
+            }
+        System.out.println("Sum is: " + sumArray01);
+
+            //array removing duplicates in array
+        int[] arrayZet = {25,11,8,75,56,66,2,89};
+        int lenghtArrayZet = arrayZet.length;
+        lenghtArrayZet = removeDuplicates(arrayZet,lenghtArrayZet);
+
+        for (int i = 0; i < lenghtArrayZet; i++) {
+        System.out.println(arrayZet[i] + " ");
+
+        }
 
 
 
@@ -607,11 +622,23 @@ public class Main {
     ///////////////////////////////////////////
     ///////////////////////////////////////////
 
+    public static int removeDuplicates(int arrayZet[], int n) {
+        if (n == 0 || n == 1) {
+            return n;
+        }
+        int[] tempArray = new int[n];
+        int j = 0;
+        for(int i = 0; i <n; i++) {
+            if(arrayZet[i] != arrayZet[i + 1]) {
+                tempArray[j++] =arrayZet[i];
+            }
+        }tempArray[j++] = arrayZet [n-1];
+        for(int i =0; i<j; i++) {
+            arrayZet[i] = tempArray[i];
+        }
 
-
-
-
-    //sunny number
+        return j;
+    }
 
 
 
