@@ -1,6 +1,7 @@
 package org.example;
 
 import java.io.IOException;
+import java.util.Arrays;
 import java.util.Date;
 
 public class Main {
@@ -591,8 +592,11 @@ public class Main {
             }
         System.out.println("Sum is: " + sumArray01);
 
+
             //array removing duplicates in array
-        int[] arrayZet = {25,11,8,75,56,66,2,89};
+
+        int[] arrayZet = {25,11,8,25,75,8};
+        Arrays.sort(arrayZet);
         int lenghtArrayZet = arrayZet.length;
         lenghtArrayZet = removeDuplicates(arrayZet,lenghtArrayZet);
 
@@ -628,15 +632,15 @@ public class Main {
         }
         int[] tempArray = new int[n];
         int j = 0;
-        for(int i = 0; i <n; i++) {
+        for(int i = 0; i <n-1; i++) {
             if(arrayZet[i] != arrayZet[i + 1]) {
                 tempArray[j++] =arrayZet[i];
             }
-        }tempArray[j++] = arrayZet [n-1];
-        for(int i =0; i<j; i++) {
+        }
+        tempArray[j++] = arrayZet [n-1];
+        for(int i = 0; i<j; i++) {
             arrayZet[i] = tempArray[i];
         }
-
         return j;
     }
 
