@@ -1,8 +1,7 @@
 package org.example;
 
-import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStreamReader;
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Date;
@@ -617,26 +616,49 @@ public class Main {
         unBoxNum = 12;
         System.out.println(unBoxNum);
 
-        //bufferedReader
-        BufferedReader bfn = new BufferedReader( new InputStreamReader(System.in));
+//        //bufferedReader
+//        BufferedReader bfn = new BufferedReader( new InputStreamReader(System.in));
+//
+//        String strRead01 = bfn.readLine();
+//        int inteRead = Integer.parseInt(bfn.readLine());
+//
+//        System.out.println("String: " + strRead01);
+//        System.out.println("int: " + inteRead);
+//
+//        //
+//        BufferedReader bfn02 = new BufferedReader( new InputStreamReader(System.in));
+//        String nameImie;
+//        try{
+//            System.out.println("podaj imie: ");
+//            nameImie = bfn02.readLine();
+//            System.out.println("Twoje imię to: " + nameImie);
+//        } catch (Exception ex02) {
+//
+//    }
 
-        String strRead01 = bfn.readLine();
-        int inteRead = Integer.parseInt(bfn.readLine());
+//        scanner next example
+//        Scanner scanner01 =new Scanner(System.in);
+//            String strSc01 = scanner01.next();
+//            System.out.println("slowo: " + strSc01);
+//
+//        Scanner scanner02 =new Scanner(System.in);
+//            String strSc02 = scanner02.nextLine();
+//            System.out.println("zdanie " + strSc02);
 
-        System.out.println("String: " + strRead01);
-        System.out.println("int: " + inteRead);
+        //formatting
+        char doPrzekonwertowania = 'g';
+        System.out.printf("%C\n", doPrzekonwertowania);
+        String strFormat01 = "string do testów";
+        System.out.printf("%s \n",strFormat01);
+        System.out.printf("%S \n",strFormat01);
 
-        //
-        BufferedReader bfn02 = new BufferedReader( new InputStreamReader(System.in));
-        String nameImie;
-        try{
-            System.out.println("podaj imie: ");
-            nameImie = bfn02.readLine();
-            System.out.println("Twoje imię to: " + nameImie);
-        } catch (Exception ex02) {
+        Date aktualnyCzas = new Date();
+        System.out.printf("Current time: %tT\n", aktualnyCzas);
+        System.out.printf("%tH:%tM:%tS\n", aktualnyCzas,aktualnyCzas,aktualnyCzas);
 
-    }
-
+        double numDou = 123223.4567;
+        DecimalFormat decFor = new DecimalFormat("$ ###,###.##");
+        System.out.println("Hmm: " + decFor.format(numDou));
 
 
 
