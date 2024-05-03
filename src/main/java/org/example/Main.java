@@ -1,11 +1,16 @@
 package org.example;
 
+import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Date;
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args)
+                    throws IOException
+    {
 
         Date dateNow = new Date();
 
@@ -605,6 +610,32 @@ public class Main {
 
         }
 
+        ArrayList<Integer> arrayList01 = new ArrayList<Integer>();
+        arrayList01.add(23);
+        System.out.println(arrayList01.get(0));
+        int unBoxNum = arrayList01.get(0);
+        unBoxNum = 12;
+        System.out.println(unBoxNum);
+
+        //bufferedReader
+        BufferedReader bfn = new BufferedReader( new InputStreamReader(System.in));
+
+        String strRead01 = bfn.readLine();
+        int inteRead = Integer.parseInt(bfn.readLine());
+
+        System.out.println("String: " + strRead01);
+        System.out.println("int: " + inteRead);
+
+        //
+        BufferedReader bfn02 = new BufferedReader( new InputStreamReader(System.in));
+        String nameImie;
+        try{
+            System.out.println("podaj imie: ");
+            nameImie = bfn02.readLine();
+            System.out.println("Twoje imię to: " + nameImie);
+        } catch (Exception ex02) {
+
+    }
 
 
 
