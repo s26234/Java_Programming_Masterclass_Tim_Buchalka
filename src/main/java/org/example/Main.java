@@ -2,6 +2,7 @@ package org.example;
 
 import java.io.IOException;
 import java.text.DecimalFormat;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Date;
@@ -659,6 +660,43 @@ public class Main {
         double numDou = 123223.4567;
         DecimalFormat decFor = new DecimalFormat("$ ###,###.##");
         System.out.println("Hmm: " + decFor.format(numDou));
+
+        SimpleDateFormat sdf = new SimpleDateFormat("yy-MM-dd");
+        String strSdf = sdf.format(new Date());
+        System.out.println(strSdf);
+
+        int train = 23;
+        if(train == 10) {
+            System.out.println("it's 10");
+        } else if (train == 155) {
+            System.out.println("it's 155");
+        } else {
+            System.out.println("it's nothing");
+        }
+
+        switch (train) {
+            case 5 :
+                System.out.println("it's 5");
+                break;
+            case 13 :
+                System.out.println("it's 13");
+                break;
+            default:
+                System.out.println("nothing again");
+
+
+
+
+        }
+
+
+
+
+
+
+
+
+
 
 
 
