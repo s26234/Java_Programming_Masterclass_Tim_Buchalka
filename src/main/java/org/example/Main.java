@@ -721,6 +721,24 @@ public class Main {
         System.arraycopy(charToCopy,1,charCopyTo,0,4);
         System.out.println(String.valueOf(charCopyTo));
 
+        Student studentAdam = new Student();
+        studentAdam.introduceYourself("Adam");
+        studentAdam.introduceYourself("Aron");
+        studentAdam.showMeName("Francisław");
+
+        Student studentDzon = new Student();
+        studentDzon.setStudentName("Dzon");
+        studentDzon.printName();
+        String john = studentDzon.getNameStudent();
+        System.out.println("teraz też wyświetli się imie: " + john);
+
+        studentDzon.setStudentName("Abramełusz");
+        studentDzon.printName();
+
+        Date currentDate = new Date();
+        System.out.println(currentDate);
+
+
 
 
 
@@ -743,6 +761,12 @@ public class Main {
     ///////////////////////////////////////////
     ///////////////////////////////////////////
     ///////////////////////////////////////////
+
+//    public static void introduceYourself(String yourName) {
+//        System.out.println ("My name is " + yourName);
+//
+//    }
+
 
     public static int removeDuplicates(int arrayZet[], int n) {
         if (n == 0 || n == 1) {
