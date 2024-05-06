@@ -715,6 +715,11 @@ public class Main {
             System.out.println("not equal");
         }
 
+        //copy Array
+        char[] charToCopy = {'a', 'b', 'e', 'f', 'h'};
+        char[] charCopyTo = new char[4];
+        System.arraycopy(charToCopy,1,charCopyTo,0,4);
+        System.out.println(String.valueOf(charCopyTo));
 
 
 
