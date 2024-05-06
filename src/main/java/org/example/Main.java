@@ -6,6 +6,7 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Date;
+import java.util.List;
 
 public class Main {
     public static void main(String[] args)
@@ -737,6 +738,42 @@ public class Main {
 
         Date currentDate = new Date();
         System.out.println(currentDate);
+
+        //exceptions example
+        Integer liczba = null;
+        try {
+            liczba = Integer.valueOf("hmm");
+        } catch (NumberFormatException nfe) {
+            System.out.println("zly format");
+        } catch (Exception e) {
+            System.out.println("inna przyczyna");
+        } finally {
+            System.out.println("finnally jak zawsze");
+        }
+
+         //przykład streama
+        List<Integer> numbersListownie = Arrays.asList(1,3,5);
+        numbersListownie.stream()
+                .map(numbersListowniee->numbersListowniee*2).forEach(result-> System.out.println(result));
+
+        //przykład dla lambdy
+        List<Integer> numLamb = new ArrayList<>();
+        numLamb.add(1);
+        numLamb.add(2);
+        numLamb.add(3);
+        //wydruk kazdej
+        numLamb.forEach(num-> System.out.println(numLamb));
+        //filtrowanie liczb
+        numLamb.stream().filter(num->num < 1).toList();
+
+
+
+
+
+
+
+
+
 
 
 
