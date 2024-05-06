@@ -683,15 +683,37 @@ public class Main {
                 break;
             default:
                 System.out.println("nothing again");
-
-
-
-
         }
 
+        int arrMulti01[][] = {{1,2,3},{2,4,6},{3,5,7}};
+        for(int i= 0; i < 3; i++){
+            for(int j = 0; j < 3; j++){
+                System.out.println(arrMulti01[i][j] + " ");
+            }
+            System.out.println();
+    }
 
+        //get class name of array
+        Class clasName = arrMulti01.getClass();
+        String nameClass = clasName.getName();
+        System.out.println(nameClass);
 
-
+        //clone array
+        int arrayClone[] = {2, 4, 18, 9};
+        System.out.println("orginal: ");
+        for(int i: arrayClone){
+            System.out.println(i);
+        }
+        System.out.println("clone: ");
+        int[] arrCloneReal =arrayClone.clone();
+        for(int i: arrCloneReal) {
+            System.out.println(i);
+        }
+        if( arrayClone == arrCloneReal) {
+            System.out.println(" arrays are equal");
+        } else {
+            System.out.println("not equal");
+        }
 
 
 
